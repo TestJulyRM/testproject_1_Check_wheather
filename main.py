@@ -26,19 +26,12 @@ class wheather:
         null = str(0)
 
         if wheather > null:
-            print('Сейчас на улице', wheather,  'C°, теплая погода')
-            text = ('Сейчас на улице ' + wheather + ' C°, теплая погода')
+            text = ('Сейчас на улице ' + wheather + ' C°, теплая погода. Отличная возможность прогуляться')
             print(text)
             self.send_mail(text)
 
-        elif wheather < null:
-            print('Сейчас на улице', wheather, 'C°, холодная погода')
-            text = ('Сейчас на улице ' + wheather + ' C°, холодная погода')
-            print(text)
-            self.send_mail(text)
-        else:
-            print('Сейчас на улице', wheather, 'C°, нулевая погода')
-            text = ('Сейчас на улице ' + wheather + ' C°, нулевая погода. Лучше Вам сегодня сидеть дома и ни куда не идти. \n Если вы получили данное письмо, просим прислать подтверждение о получинии информации о погоде')
+        elif wheather <= null:
+            text = ('Сейчас на улице ' + wheather + ' C°, холодная погода. Лучше Вам сегодня сидеть дома и ни куда не идти. ')
             print(text)
             self.send_mail(text)
 
